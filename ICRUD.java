@@ -3,4 +3,6 @@ public interface ICRUD {
     public void addWord();
     public void listAll();
     public String toString();
+    public void remove();
+    public void update();
 }
