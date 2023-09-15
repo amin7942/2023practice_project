@@ -22,6 +22,7 @@ public class WordManager {
         return sc.nextInt();
     }
     public void start(){
+        wordCRUD.loadFile();
         while(true){
             int menu = selectMenu();
 
@@ -30,25 +31,25 @@ public class WordManager {
                     wordCRUD.listAll();
                     break;
                 case 2:
-
+                    wordCRUD.step_search();
                     break;
                 case 3:
-
+                    wordCRUD.search();
                     break;
                 case 4:
                     wordCRUD.addWord();
                     break;
                 case 5:
-
+                    wordCRUD.update();
                     break;
                 case 6:
-
+                    wordCRUD.remove();
                     break;
                 case 7:
-
+                    wordCRUD.saveFile();
                     break;
                 case 0:
-
+                    System.out.println("종료 됨");
                     break;
             }
             if(menu == 0) break;
