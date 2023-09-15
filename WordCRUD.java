@@ -34,7 +34,6 @@ public class WordCRUD {
 
     }
     public void search(){
-        sc.nextLine();
         System.out.println("검색할 단어 입력");
         String str = sc.nextLine();
         search_list(str);
