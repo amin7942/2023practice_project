@@ -21,16 +21,20 @@ public class WordCRUD {
         System.out.println("새 단어가 단어장에 추가되었습니다. ");
     }
     public void search_list(String search){
+        int flag = 0;
         System.out.println("----------------------------");
         for(int i = 0; i < list.size(); i++){
             if(list.get(i).getWord().contains(search)){
+                flag = 1;
                 System.out.print((i+1)+" ");
                 System.out.println(list.get(i).toString());
             }
         }
         System.out.println("----------------------------");
+
     }
     public void search(){
+        sc.nextLine();
         System.out.println("검색할 단어 입력");
         String str = sc.nextLine();
         search_list(str);
@@ -48,6 +52,7 @@ public class WordCRUD {
             i++;
         }
         System.out.println("----------------------------");
+        sc.nextLine();
     }
     public void update(){
         System.out.println("==> 수정 할 단어 검색 : ");
